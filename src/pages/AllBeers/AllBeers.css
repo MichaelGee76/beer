@@ -1,0 +1,17 @@
+.tile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background-color: antiquewhite;
+    padding: 5vw;
+    max-width: 80%;
+    margin: auto;
+    margin-bottom: 5vw;
+}
+
+.imgAll {
+    height: 20vh;
+}

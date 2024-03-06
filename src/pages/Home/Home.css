@@ -1,0 +1,24 @@
+.container {
+    padding: 2vw 10vw;
+}
+
+.inner {
+    margin-bottom: 5vw;
+}
+
+.hero,
+.heading2Hero {
+    margin-bottom: 2vw;
+}
+
+.info {
+    margin-bottom: 5vw;
+}
+
+.hero {
+    border: solid 2px;
+}
+
+.heroLink {
+    color: black;
+}
