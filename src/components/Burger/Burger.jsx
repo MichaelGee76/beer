@@ -4,7 +4,7 @@ import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { Switch } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 export default function BasicMenu() {
@@ -40,9 +40,15 @@ export default function BasicMenu() {
                     "aria-labelledby": "basic-button",
                 }}
             >
-                <MenuItem className="menuItem" onClick={console.log("fish")}>
+                <MenuItem className="menuItem" onClick={handleClose}>
                     Dark/Light
                     <Switch onChange={() => setIsDark((isDark) => !isDark)} />
+                </MenuItem>
+                <MenuItem onClick={handleClose} className="menuItem">
+                    <Link to="/randombeers">Random Beer</Link>
+                </MenuItem>
+                <MenuItem onClick={handleClose} className="menuItem">
+                    <Link to="/allbeers">All Beer</Link>
                 </MenuItem>
             </Menu>
         </div>

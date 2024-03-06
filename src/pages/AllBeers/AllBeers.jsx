@@ -18,8 +18,6 @@ const AllBeers = () => {
 
     return (
         <div>
-            <Header />
-
             {myData ? (
                 myData.map((element, index) => (
                     <div key={index} className="tile">

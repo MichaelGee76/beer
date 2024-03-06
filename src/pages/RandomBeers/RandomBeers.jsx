@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Header from "../../components/Header/Header";
 import "./RandomBeers.css";
+import Footer from "../../components/Footer/Footer";
 
 const RandomBeers = () => {
     const [myRandomBeer, setRandomBeer] = useState();
@@ -12,9 +13,11 @@ const RandomBeers = () => {
     }, []);
 
     console.log(myRandomBeer);
+    // Sorgt dafür dass die daten erst gefetched werden bevor das html gebaut wird!
+    // ähnlich wie der ternary nur kürzer und besser!!!!
+    if (myRandomBeer === undefined) return "Loading...";
     return (
         <div>
-            <Header />
             <div className="output">
                 <h1>Beer of the Day</h1>
                 <img src={myRandomBeer.image_url} alt="" />
@@ -26,6 +29,7 @@ const RandomBeers = () => {
                 <p className="attRandom">Attenuation level: {myRandomBeer.attenuation_level}</p>
                 <p className="description">{myRandomBeer.description}</p>
             </div>
+            <Footer />
         </div>
     );
 };

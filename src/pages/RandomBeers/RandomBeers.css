@@ -1,13 +1,14 @@
 .output {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 1vw;
     width: 70%;
+
     margin: auto;
     padding: 3vw 5vw;
-    background-color: antiquewhite;
+    background-color: var(--main);
     text-align: center;
 }
 

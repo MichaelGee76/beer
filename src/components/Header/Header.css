@@ -9,3 +9,14 @@ a {
 .menuItem {
     color: black;
 }
+
+.arrow {
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+.nav-content {
+    display: flex;
+    align-items: center;
+}

@@ -10,18 +10,23 @@ img {
 
 a {
     text-decoration: none;
+    color: var(--menu);
 }
 
 body {
     --background: #ffffff;
-    --text: #000000;
-    --main: rgb(0, 102, 219);
+    --text: #1b1b1b;
+    --main: antiquewhite;
     --secondary: #cccccc;
     --arrow: white;
+    --menu: #000000;
+    --tile: antiquewhite;
 }
 
 body.dark {
-    --background: rgba(48, 48, 48);
+    --background: rgb(43, 42, 42);
     --text: #ffffff;
-    --secondary: #242424;
+    --secondary: #424040;
+    --main: antiquewhite;
+    --main: #5c5959;
 }

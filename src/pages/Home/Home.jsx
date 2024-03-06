@@ -1,11 +1,9 @@
 import { NavLink } from "react-router-dom";
 import "./Home.css";
-import HeaderHome from "../../components/HeaderHome/HeaderHome";
 
 const Home = () => {
     return (
         <div>
-            <HeaderHome />
             <div className="container">
                 <NavLink className="heroLink" to={"/allbeers"}>
                     <div className="inner">
