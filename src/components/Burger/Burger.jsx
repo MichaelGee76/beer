@@ -4,6 +4,8 @@ import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { Switch } from "@mui/material";
+import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 export default function BasicMenu() {
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -14,17 +16,20 @@ export default function BasicMenu() {
     const handleClose = () => {
         setAnchorEl(null);
     };
-    const [isDark, setIsDark] = React.useState(false);
+    const [isDark, setIsDark] = useState(false);
 
-    const dark = () => {
-        console.log("dark");
-        isDark ? document.body.classList.add("dark") : document.body.classList.remove("dark");
-    };
+    useEffect(() => {
+        if (isDark) {
+            document.body.classList.add("dark");
+        } else {
+            document.body.classList.remove("dark");
+        }
+    }, [isDark]);
 
     return (
         <div>
             <Button id="basic-button" aria-controls={open ? "basic-menu" : undefined} aria-haspopup="true" aria-expanded={open ? "true" : undefined} onClick={handleClick}>
-                <MenuIcon style={{ color: "white" }} />
+                <MenuIcon style={{ color: "black" }} />
             </Button>
             <Menu
                 id="basic-menu"
@@ -37,7 +42,7 @@ export default function BasicMenu() {
             >
                 <MenuItem className="menuItem" onClick={console.log("fish")}>
                     Dark/Light
-                    <Switch onChange={dark} />
+                    <Switch onChange={() => setIsDark((isDark) => !isDark)} />
                 </MenuItem>
             </Menu>
         </div>

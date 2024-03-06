@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import { Link } from "react-router-dom";
+import { Button } from "@mui/material";
 
 const AllBeers = () => {
     const [myData, setMyData] = useState();
@@ -27,9 +28,11 @@ const AllBeers = () => {
                             <h2 className="heading2All">{element.name}</h2>
                             <h5 className="heading5All">{element.tagline}</h5>
                             <p className="paraAll">{element.first_brewed}</p>
-                            <Link className="detail" to={`/detail/${element._id}`}>
-                                Details
-                            </Link>
+                            <Button>
+                                <Link className="detail" to={`/detail/${element._id}`}>
+                                    Details
+                                </Link>
+                            </Button>
                         </div>
                     </div>
                 ))

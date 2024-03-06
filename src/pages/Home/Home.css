@@ -20,5 +20,5 @@
 }
 
 .heroLink {
-    color: black;
+    color: var(--text);
 }

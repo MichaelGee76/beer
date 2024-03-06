@@ -11,3 +11,17 @@ img {
 a {
     text-decoration: none;
 }
+
+body {
+    --background: #ffffff;
+    --text: #000000;
+    --main: rgb(0, 102, 219);
+    --secondary: #cccccc;
+    --arrow: white;
+}
+
+body.dark {
+    --background: rgba(48, 48, 48);
+    --text: #ffffff;
+    --secondary: #242424;
+}
